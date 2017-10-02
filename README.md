@@ -29,10 +29,8 @@ sentence의 max_len은 최대 문장길이를 기준으로 하며, 문장이 끝
   
 입력데이터로 one-hot vector가 아닌 embedding vector를 사용하였다.  
 각 글자마다 embedding vector를 가중치처럼 사용하며, 처음에는 임의의 값으로 시작하여 학습 과정에서 점차 값이 변하게 된다.  
-<br>
-<img src="https://github.com/cuteboydot/Sentence-Classification-using-Char-CNN-and-RNN/tree/master/img/img1.png" />
-</br>
-
+<img src="https://github.com/cuteboydot/Sentence-Classification-using-Char-CNN-and-RNN/tree/master/img/img1.png" width="40%">  
+  
 이후부터 학습모델을 2개를 생성한다.  
 1) char-embedding -> CNN -> full connected layer 모델  
 2) char-embedding -> CNN -> RNN -> full connected layer 모델  
