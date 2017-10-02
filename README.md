@@ -29,7 +29,6 @@ sentence의 max_len은 최대 문장길이를 기준으로 하며, 문장이 끝
   
 입력데이터로 one-hot vector가 아닌 embedding vector를 사용하였다.  
 각 글자마다 embedding vector를 가중치처럼 사용하며, 처음에는 임의의 값으로 시작하여 학습 과정에서 점차 값이 변하게 된다.  
-<img src="./img/img1.png" width="70%">  
   
 이후부터 학습모델을 2개를 생성한다.  
 1) char-embedding -> CNN -> full connected layer 모델  
@@ -40,16 +39,18 @@ sentence의 max_len은 최대 문장길이를 기준으로 하며, 문장이 끝
 source code : sentence_classification_char_cnn.py  
   
 CNN filter의 width는 입력 embedding vector의 dim과 같은 사이즈로 한다.  
-height의 경우 (3,6,9) 3가지의 필터 종류를 사용하였다. 이는 곧 n-gram을 의미하며, 몇 글자를 통과시킬지를 결정한다.  
+height의 경우 (3,6,9) 3가지의 필터 종류를 사용하였다. 이는 곧 n-gram을 의미하며, 몇 글자를 통과시킬지를 결정한다. 
+<img src="./img/img1.png" width="75%">  
+   
 또한, pooling시 kernel의 width 역시 embedding vector의 dim과 같은 사이즈로 하고,   
 height의 경우 max_len - filter_height + 2 - SEQ_FEAT_DIM로 정한다.  
 위와 같이 필터를 설정할 경우 필터를 통과후 shape은 (SEQ_FEAT_DIM, 1)이 된다.  
-<img src="https://github.com/cuteboydot/Sentence-Classification-using-Char-CNN-and-RNN/tree/master/img/img2.png" width="70%">  
+<img src="./img/img2.png" width="75%">  
   
 conv2d와 max-pooling을 통과한 feature shape은 (batch_size, SEQ_FEAT_DIM, 1, num_filter)가 3개의 필터(3,6,9 gram filter)별로 존재하게 된다.  
 이를 (batch_size, SEQ_FEAT_DIM × num_filter × 3) 형태로 변환한다.  
 이후, 문장 카테고리 label과 full-connected layer로 처리한다. 
-<img src="https://github.com/cuteboydot/Sentence-Classification-using-Char-CNN-and-RNN/tree/master/img/img3.png" width="70%">  
+<img src="./img/img3.png" width="75%">  
   
 ### 2.2 char-embedding & CNN & RNN Model
 source code : sentence_classification_char_cnn_rnn.py  
@@ -57,9 +58,9 @@ source code : sentence_classification_char_cnn_rnn.py
 CNN 과정까지는 2.1과 동일하다.  
 (batch_size, SEQ_FEAT_DIM, 1, num_filter)× 3 인 conv-layer의 출력물을 RNN의 입력으로 사용할 것이다.  
 이때, SEQ_FEAT_DIM가 RNN의 input seq을 의미하며, num_filter×3이 input feature vector가 된다.  
-<img src="https://github.com/cuteboydot/Sentence-Classification-using-Char-CNN-and-RNN/tree/master/img/img4.png" width="70%">   
+<img src="./img/img4.png" width="75%">  
 RNN의 output shape는 (SEQ_FEAT_DIM, STATE_SIZE)가 되며, 마지막으로 full-connected layer 사용을 위해 (1, SEQ_FEAT_DIM × STATE_SIZE)로 변형한다.  
-<img src="https://github.com/cuteboydot/Sentence-Classification-using-Char-CNN-and-RNN/tree/master/img/img5.png" width="70%">  
+<img src="./img/img5.png" width="75%">  
   
 ### 3. Test result.  
 
