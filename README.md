@@ -63,7 +63,6 @@ CNN 과정까지는 2.1과 동일하다.
 RNN의 output shape는 (SEQ_FEAT_DIM, STATE_SIZE)가 되며, 마지막으로 full-connected layer 사용을 위해 (SEQ_FEAT_DIM × STATE_SIZE, 1)로 변형한다.  
 <img src="./img/img5.png" width="75%">  
   
-전체 graph 구조는 다음과 같다.  
 
   
 ### 3. Test result  
