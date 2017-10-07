@@ -68,7 +68,7 @@ RNN의 output shape는 (SEQ_FEAT_DIM, STATE_SIZE)가 되며, 마지막으로 ful
   
 ### 3. Test result  
 sentence_classification_char_cnn.py 와 sentence_classification_char_cnn_rnn.py 을 실험하였다.  
-기본적인 char embedding과 CNN을 이용한 분류기법에서는 feature map의 height를 1로 설정한다.
+기본적인 char embedding과 CNN을 이용한 분류기법에서는 feature map의 height를 1로 설정한다.  
 하지만 본 실험의 의도는 CNN의 필터가 결국은 연속된 글자들의 순서를 통과하기 때문에, feature의 시퀀스(SEQ_FEAT_DIM)를 의미있는 수로 늘린후 RNN의 입력으로 사용하는 것 이었다.  
 실제 성능면에서도 조금 나은 결과를 보여주었다.    
 <img src="./img/loss.png" width="75%">   
