@@ -1,4 +1,4 @@
-# Implementation of sentence classification using Char-CNN & RNN
+# Implementing a sentence classification using Char-CNN & RNN
 
 #### cuteboydot@gmail.com
 
@@ -7,7 +7,7 @@
 2. [Convolutional Neural Networks for Sentence Classification, Yoon Kim](https://arxiv.org/pdf/1408.5882.pdf)
 3. [Understanding Convolutional Neural Networks for NLP, WILDML](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/)
 
-#### data refeence
+#### data reference
 1. [네이버 글로벌회화](http://phrasebook.naver.com/detail.nhn?bigCategoryNo=2&targetLanguage=en)
 
 ### 1. Char 레벨의 CNN과 RNN을 이용한 문장 분류기
