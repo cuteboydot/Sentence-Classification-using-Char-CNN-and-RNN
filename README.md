@@ -68,5 +68,8 @@ RNN의 output shape는 (SEQ_FEAT_DIM, STATE_SIZE)가 되며, 마지막으로 ful
   
 ### 3. Test result  
 sentence_classification_char_cnn.py 와 sentence_classification_char_cnn_rnn.py 을 실험하였다.  
+기본적인 char embedding과 CNN을 이용한 분류기법에서는 SEQ_FEAT_DIM를 1로 사용한다.
+하지만 CNN의 필터가 결국은 연속된 글자들의 순서를 통과하기 때문에 SEQ_FEAT_DIM를 의미 있는 수로 늘린 후,   
+feature들의 시퀀스를 RNN으로 사용한점이 보다 나은 결과를 보여주었다.  
 <img src="./img/loss.png" width="75%">   
 <img src="./img/acc.png" width="75%"> 
