@@ -1,4 +1,4 @@
-# Implementing a sentence classification using Char-CNN & RNN
+# Implementing a sentence classification using Char level CNN & RNN
 
 #### cuteboydot@gmail.com
 
