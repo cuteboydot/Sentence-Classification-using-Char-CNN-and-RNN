@@ -78,7 +78,7 @@ sentence_classification_char_cnn.py 와 sentence_classification_char_cnn_rnn.py 
   
 ### 4. Tensorflow gpaph  
 sentence_classification_char_cnn.py  
-<img src="./img/graph_cnn.png" width="80%">  
+<img src="./img/graph_cnn.png" width="100%">  
   
 sentence_classification_char_cnn_rnn.py  
-<img src="./img/graph_cnn_rnn.png" width="80%">  
+<img src="./img/graph_cnn_rnn.png" width="100%">  
