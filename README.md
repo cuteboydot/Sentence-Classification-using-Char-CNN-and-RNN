@@ -74,4 +74,11 @@ sentence_classification_char_cnn.py 와 sentence_classification_char_cnn_rnn.py 
 <img src="./img/loss.png" width="75%">   
 <img src="./img/acc.png" width="75%">  
   
-<img src="./img/result_test.png" width="65%">
+<img src="./img/result_test.png" width="65%">  
+  
+### 4. Tensorflow gpaph  
+sentence_classification_char_cnn.py  
+<img src="./img/graph_cnn.png" width="60%">  
+  
+sentence_classification_char_cnn_rnn.py  
+<img src="./img/graph_cnn_rnn.png" width="60%">  
