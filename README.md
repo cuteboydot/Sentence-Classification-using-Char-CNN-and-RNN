@@ -72,4 +72,5 @@ sentence_classification_char_cnn.py 와 sentence_classification_char_cnn_rnn.py 
 이를 RNN의 입력으로 사용하는 것 이었다(2.2 모델).  
 실제 실험 결과는 다음과 같다.    
 <img src="./img/loss.png" width="75%">   
-<img src="./img/acc.png" width="75%"> 
+<img src="./img/acc.png" width="75%">  
+<img src="./img/result_test.png" width="75%">
